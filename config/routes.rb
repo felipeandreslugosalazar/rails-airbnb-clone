@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   # post "/lookalikes/lookalike_id/bookings", to: "bookings#create"
 
   resources :lookalikes do 
-    resources :bookings, only: [:create]
+    resources :bookings, only: [:create] #is this replaced now?
   end
+
+  resources :bookings
 end
