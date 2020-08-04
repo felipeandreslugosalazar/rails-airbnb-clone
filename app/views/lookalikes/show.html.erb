@@ -1,6 +1,7 @@
 <h1><%= @lookalike.celeb_name %></h1>
 
 <h2>Biography</h2>
+        <%= cl_image_tag @lookalike.photo.key, height: 300, width: 400, crop: :fill %>
 <p><%= @lookalike.description %></p>
 <p><%= @lookalike.price %>€</p>
 
