@@ -9,13 +9,8 @@ class BookingsController < ApplicationController
   end
 
   def my_bookings
-    # this is intended to act as a list index but it
-    # will filter by @user
-
-
-    # here we will have to pass the id of the
-    # in the view i will iterate over @my_bookings to show the user's bookings
-    
+    # the information is been passed using USER:ID
+    # via users#controller
   end
 
   private
