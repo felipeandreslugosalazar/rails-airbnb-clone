@@ -17,11 +17,12 @@ class LookalikesController < ApplicationController
         @lookalike = Lookalike.new(lookalike_params)
         authorize @lookalike
         @lookalike.save
+        redirect_to @lookalike
     end
 
     private
 
     def lookalike_params
-        params.require(:lookalike).permit(:celeb_name)
+        params.require(:lookalike).permit(:celeb_name, :description, :price)
     end
 end
