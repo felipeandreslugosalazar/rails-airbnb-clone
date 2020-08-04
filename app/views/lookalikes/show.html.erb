@@ -1,9 +1,16 @@
-<h1><%= @lookalike.celeb_name %></h1>
+<div style="height: 50px"></div>
+<div style="width: 35%; margin: 0 auto; text-align: center; background-color: white; border-radius: 20px; padding: 30px">
+  <h1><%= @lookalike.celeb_name %></h1>
+  <br>
+  <%= cl_image_tag @lookalike.photo.key, height: 300, width: 400, crop: :fill %>
+  <div style="height: 25px">
+  </div>
 
-<h2>Biography</h2>
-        <%= cl_image_tag @lookalike.photo.key, height: 300, width: 400, crop: :fill %>
-<p><%= @lookalike.description %></p>
-<p><%= @lookalike.price %>€</p>
+  <h5><strong>About myself: </strong><%= @lookalike.description %></h5>
+  <h4><strong>Price per hour: </strong><%= @lookalike.price %>€</h4>
+  <br>
 
-<p><%= link_to "Book #{@lookalike.celeb_name}", new_lookalike_booking_path(@lookalike) %></p> |
-<p><%= link_to "Return to all lookalikes", lookalikes_path %></p>
+  <p><%= link_to "Book #{@lookalike.celeb_name}", new_lookalike_booking_path(@lookalike) %></p>
+  <p><%= link_to "Return to all lookalikes", lookalikes_path %></p>
+
+</div>
