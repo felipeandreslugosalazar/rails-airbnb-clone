@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   # post "/lookalikes/lookalike_id/bookings", to: "bookings#create"
 
   # 7. As a user I can access a dashboard
-  get "/bookings/my_bookings", to: "bookings#my_bookings"
+  # get "/bookings/my_bookings", to: "bookings#my_bookings"
 
   # =============================================================
   # this we need to double think
@@ -33,5 +33,9 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create] #is this replaced now?
   end
 
-  resources :bookings
+  resources :users do
+    get "/bookings/", to: "bookings#my_bookings"
+  end
+
+  # resources :bookings
 end
