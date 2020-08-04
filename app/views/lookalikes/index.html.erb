@@ -4,6 +4,9 @@
     <% @lookalikes.each do |lookalike| %>
       <div>
         <li><%= link_to lookalike.celeb_name, lookalike_path(lookalike) %></li>
+        <% if lookalike.photo.attached? %>
+          <%= cl_image_tag lookalike.photo.key, height: 100, crop: :fill %>
+        <% end %>
       </div>
     <% end %>
   </ul>

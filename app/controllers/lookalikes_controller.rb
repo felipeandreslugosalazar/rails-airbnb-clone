@@ -24,6 +24,6 @@ class LookalikesController < ApplicationController
     private
 
     def lookalike_params
-        params.require(:lookalike).permit(:celeb_name, :description, :price)
+        params.require(:lookalike).permit(:celeb_name, :description, :price, :photo)
     end
 end
