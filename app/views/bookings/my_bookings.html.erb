@@ -1,6 +1,6 @@
 <h1>here we will show all the particular bookings for a particular user</h1>
 <h2>is where i want to iterate over the bookings</h2>
-<% @bookings.each do |f|%>
+<% current_user.bookings.each do |f|%>
    <li><%= f.date %></li>
    <li><%= f.lookalike.celeb_name%> </li>
 <% end %>
