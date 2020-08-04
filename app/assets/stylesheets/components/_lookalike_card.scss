@@ -1,0 +1,17 @@
+.card {
+  border-radius: 5px;
+  box-shadow: 0 0 50px grey;
+}
+
+.card > img {
+  height: 200px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+}
+
+.card-title {
+  text-align: center;
+  font-size: 30px;
+}
+
