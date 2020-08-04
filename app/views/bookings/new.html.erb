@@ -1,4 +1,4 @@
-<h1>Book <%= @lookalike %></h1>
+<h1>Book <%= @lookalike.celeb_name %></h1>
 <%= simple_form_for [ @lookalike, @booking ] do |f| %>
     <%= f.input :date %>
     <%= f.submit %>

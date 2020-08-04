@@ -15,6 +15,7 @@ class LookalikesController < ApplicationController
 
     def create
         @lookalike = Lookalike.new(lookalike_params)
+        @lookalike.user = current_user
         authorize @lookalike
         @lookalike.save
         redirect_to @lookalike

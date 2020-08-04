@@ -1,6 +1,9 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    authorize @booking
+    @lookalike = Lookalike.find(params[:lookalike_id])
+    authorize @lookalike
   end
 
   def create
@@ -8,8 +11,9 @@ class BookingsController < ApplicationController
     authorize @booking
     @lookalike = Lookalike.find(params[:lookalike_id])
     @booking.lookalike = @lookalike
+    @booking.user = current_user
     if @booking.save
-      redirect_to lookalike_path
+      redirect_to user_bookings_path(current_user)
     else
       render :new
     end
@@ -18,6 +22,8 @@ class BookingsController < ApplicationController
   def my_bookings
     # the information is been passed using USER:ID
     # via users#controller
+    @bookings = Booking.all
+    authorize @bookings
   end
 
   private
