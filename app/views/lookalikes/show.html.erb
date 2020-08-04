@@ -4,5 +4,5 @@
 <p><%= @lookalike.description %></p>
 <p><%= @lookalike.price %>€</p>
 
-
+<p><%= link_to "Book #{@lookalike.celeb_name}", new_booking_path(@lookalike.id) %></p> |
 <p><%= link_to "Return to all lookalikes", lookalikes_path %></p>
