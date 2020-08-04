@@ -2,13 +2,18 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     authorize @booking
-    @booking.save
+    @lookalike = Lookalike.find(params[:lookalike_id])
+    @booking.lookalike = @lookalike
+    if @booking.save
+      redirect_to lookalike_path
+    else
+      render :new
+    end
   end
 
   private
