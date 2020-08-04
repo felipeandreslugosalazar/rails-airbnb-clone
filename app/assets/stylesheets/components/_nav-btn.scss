@@ -1,0 +1,23 @@
+a.nav-link {
+    font-family: $standard-font;
+    transition: $standard-transition;
+}
+
+.navbar-light .navbar-nav .active > .nav-link:hover {
+    color: $primary-color;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: $standard-radius;
+}
+
+.dropdown-item {
+    transition: $standard-transition;
+    &:hover {
+        background-color: none;
+        color: $primary-color;
+        cursor: pointer;
+    }
+}
