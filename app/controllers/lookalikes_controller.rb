@@ -14,11 +14,14 @@ class LookalikesController < ApplicationController
     end
 
     def create
-        @lookalike = Lookalike.new(lookalike_params)
-        @lookalike.user = current_user
-        authorize @lookalike
-        @lookalike.save
+      @lookalike = Lookalike.new(lookalike_params)
+      @lookalike.user = current_user
+      authorize @lookalike
+      if @lookalike.save
         redirect_to @lookalike
+      else
+        render :new
+      end
     end
 
     private
