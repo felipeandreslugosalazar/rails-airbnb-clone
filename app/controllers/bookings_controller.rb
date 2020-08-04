@@ -1,14 +1,17 @@
 class BookingsController < ApplicationController
-
   def new
     @booking = Booking.new
-    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     authorize @booking
     @booking.save
+  end
+
+  def my_bookings
+    # the information is been passed using USER:ID
+    # via users#controller
   end
 
   private

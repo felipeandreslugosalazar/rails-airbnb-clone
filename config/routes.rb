@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # 2. as a user i would like to be able to register
   # DONE WITH DEVISE
+
   # 3. As a user I can create a lookalike
   # get "/lookalikes/new", to: "lookalikes#new"
 
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
   # post "/lookalikes/lookalike_id/bookings", to: "bookings#create"
 
   # 7. As a user I can access a dashboard
-  # get "/bookings/my_bookins", to: "bookings#my_bookings"
+  # get "/bookings/my_bookings", to: "bookings#my_bookings"
 
   # =============================================================
   # this we need to double think
@@ -28,9 +29,13 @@ Rails.application.routes.draw do
   # get "/lookalikes/:id/rate", to: "ratings#new"
   # post "/lookalikes/lookalike_id/bookings", to: "bookings#create"
 
-  resources :lookalikes do 
+  resources :lookalikes do
     resources :bookings, only: [:create] #is this replaced now?
   end
 
-  resources :bookings
+  resources :users do
+    get "/bookings/", to: "bookings#my_bookings"
+  end
+
+  # resources :bookings
 end
