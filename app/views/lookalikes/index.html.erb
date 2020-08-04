@@ -1,0 +1,10 @@
+<h1>Browse Lookalikes</h1>
+<div>
+  <ul>
+    <% @lookalikes.each do |lookalike| %>
+      <div>
+        <li><%= link_to lookalike.celeb_name, lookalike_path(lookalike) %></li>
+      </div>
+    <% end %>
+  </ul>
+</div>
