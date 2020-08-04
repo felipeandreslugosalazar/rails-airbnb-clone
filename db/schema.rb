@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_122620) do
 
   create_table "lookalikes", force: :cascade do |t|
     t.string "celeb_name"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"

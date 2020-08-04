@@ -5,7 +5,16 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
+  def new?
+    true
+  end
+
   def create?
-    record.user == user
+    true
+  end
+
+  def my_bookings?
+    true
+    # record.user == user
   end
 end
