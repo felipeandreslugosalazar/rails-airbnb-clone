@@ -11,6 +11,7 @@
   border-radius: $standard-radius;
   transform: scale(1);
   transition: $standard-transition;
+  
   &:hover {
     transform: scale(1.03);
   }
@@ -25,8 +26,4 @@
   img {
     object-fit: cover;
   }
-}
-
-.card-date {
-  float: left;
 }
