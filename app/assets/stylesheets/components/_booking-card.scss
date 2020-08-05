@@ -1,0 +1,50 @@
+.card-bookings-body {
+  display: flex;
+  justify-content: center;
+}
+
+.card-booking {
+  width: 900px;
+  border-radius: $standard-radius;
+  overflow: hidden;
+  box-shadow: $standard-shadow;
+}
+.booking-card-text {
+  position: relative;
+  left: 10px;
+}
+
+.card-title {
+  font-size: 50px
+}
+
+.card-body {
+  margin-top: 95px
+}
+
+.booking-card-price {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.card-price {
+  font-size: 30px
+}
+
+.booking-details {
+  position: absolute;
+  right: 50px;
+  bottom: 29px
+}
+
+.card-img {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.booking-date {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  color: gray;
+}
