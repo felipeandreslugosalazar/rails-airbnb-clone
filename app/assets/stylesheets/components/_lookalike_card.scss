@@ -6,6 +6,7 @@
 .lookalike-card {
   width: 18rem;
   overflow: hidden;
+  margin-top: 40px;
 }
 
 .card > img {
@@ -33,7 +34,30 @@
 
 .card-text {
   text-align: right;
+  margin-bottom: 16px;
 }
+
 .lookalike-img {
   box-shadow: $standard-shadow;
+}
+
+
+.lookalikes-cards-body {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+
+.btn-create {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.btn-index-details {
+  margin-left: 0;
 }

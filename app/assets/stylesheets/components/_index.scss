@@ -3,5 +3,15 @@
 @import "avatar";
 @import "navbar";
 @import "lookalike_card";
-@import "booking-card";
-@import "booking-card";
+
+.index-header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.index-header-text {
+  font-size: 50px;
+  font-family: $headers-font;
+}
