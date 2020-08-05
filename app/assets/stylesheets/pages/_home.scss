@@ -2,7 +2,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 240px 0;
 }
 
 .banner h1 {
@@ -68,10 +68,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 40px;
+  margin-bottom: 80px;
 }
 
 .card-category {
@@ -86,6 +84,11 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transform: scale(1);
+  transition: $standard-transition;
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .divider {

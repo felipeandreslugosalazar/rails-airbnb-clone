@@ -1,37 +1,19 @@
-<h1>here we will show all the particular bookings for a particular user</h1>
-<h2>is where i want to iterate over the bookings</h2>
+<h1 class="bookings-title">Here are all your bookings</h1>
+
 <% current_user.bookings.each do |f|%>
-   <li><%= f.date %></li>
-   <li><%= f.lookalike.celeb_name%> </li>
+   <div class="card mb-4">
+        <div class="row no-gutters">
+            <div class="col-md-4 card-img">
+                <img src="https://source.unsplash.com/user/erondu" class="card-img" alt="placeholder" style="max-height: 160px;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-title"><%= f.lookalike.celeb_name%> <small class="text-muted"><%= f.lookalike.price %>€/h</small></p>
+                    <p class="card-date text-muted"><%= f.date %></p>
+                </div>
+            </div>
+        </div>
+    </div>
 <% end %>
 
-<%= link_to "Back to all lookalikes", lookalikes_path, class: "btn btn-flat" %>
-
-
-<h1>Lookalike Bookings, work in progress</h1>
-
-<div class="card-bookings-body">
-  <div class="card-booking card mb-3">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="https://picsum.photos/200" class="card-img" alt="">
-      </div>
-      <div class="col-md-8 booking-card-text">
-        <div class="card-body">
-          <h2 class="card-title">Lookalike Name</h2>
-        </div>
-        <div class="booking-card-price">
-         <h5 class="card-price">50€</h5>
-         </div>
-        <div class="booking-date">
-          <h4>26.06.2020 - 15:00</h4>
-        </div>
-        <div class="booking-details">
-          <a class="btn btn-flat" href="/lookalikes">Visit Page</a>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</div>
+<p class="back-btn"><%= link_to "Back to all lookalikes", lookalikes_path, class: "btn btn-flat btn-standard" %></p>
