@@ -1,6 +1,11 @@
 .card {
-  border-radius: 5px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  border-radius: $standard-radius;
+  box-shadow: $standard-shadow;
+}
+
+.lookalike-card {
+  width: 18rem;
+  overflow: hidden;
 }
 
 .card > img {
@@ -28,4 +33,7 @@
 
 .card-text {
   text-align: right;
+}
+.lookalike-img {
+  box-shadow: $standard-shadow;
 }
