@@ -1,4 +1,6 @@
 class LookalikesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  
     def index
         @lookalikes = policy_scope(Lookalike).order(created_at: :desc)
     end
