@@ -1,0 +1,22 @@
+.btn-standard {
+    background-color: $primary-color;
+    border: none;
+    border-radius: $hard-radius;
+    padding: $button-padding;
+    margin: 16px;
+    box-shadow: 0px 0px 10px rgb(206, 206, 206);
+    transform: scale(1);
+    transition: $standard-transition;
+    font-family: $standard-font;
+
+    &:hover {
+        transition: $standard-transition;
+        background-color: $secondary-color;
+        transform: scale(1.03);
+    }
+}
+
+a.btn-standard {
+    color: white;
+    text-decoration: none;
+}
