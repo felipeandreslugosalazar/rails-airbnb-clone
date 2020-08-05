@@ -1,6 +1,6 @@
 .card {
   border-radius: 5px;
-  box-shadow: 0 0 50px grey;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 }
 
 .card > img {
@@ -11,7 +11,21 @@
 }
 
 .card-title {
-  text-align: center;
+  margin-bottom: 20px;
   font-size: 30px;
 }
 
+.card-btn-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.card-body {
+
+}
+
+
+.card-text {
+  text-align: right;
+}
