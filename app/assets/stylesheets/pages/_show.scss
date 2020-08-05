@@ -1,0 +1,39 @@
+.show-page {
+    margin-top: 40px;
+
+    img {
+        border-radius: $standard-radius;
+        box-shadow: 0px 0px 10px lightgrey;
+    }
+}
+
+.rating-section {
+    margin-top: 8px;
+    .rating-quote {
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
+    i {
+        color: rgb(236, 224, 57);
+         margin-bottom: 32px;
+    }
+}
+
+.book-section {
+    text-align: center;
+
+    .amount-bookings {
+        font-size: 12px;
+    }
+}
+
+.desc-section {
+    margin-top: 16px;
+
+    .desc {
+        background-color: rgb(238, 238, 238);
+        padding: $standard-padding;
+        border-radius: $standard-radius;
+        box-shadow: 0px 0px 10px lightgrey;
+    }
+}
