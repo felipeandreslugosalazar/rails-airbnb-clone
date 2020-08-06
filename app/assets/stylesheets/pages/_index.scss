@@ -1,2 +1,78 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.index-header {
+    margin: 40px 0px;
+    text-align: center;
+}
+
+.index-cards {
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: $standard-shadow;
+    border: none;
+}
+
+.index-card {
+    box-shadow: $standard-shadow;
+    border: none;
+    transform: scale(1);
+    transition: $standard-transition;
+    &:hover {
+        transform: scale(1.03);
+    }
+    img {
+        width: max;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+.card-text-index {
+    text-align: center;
+}
+
+.card-title-index {
+    font-size: 20px;
+}
+
+.card-footer-index {
+    margin-top: 24px;
+    padding-bottom: 40px;
+
+    a {
+        box-shadow: $standard-shadow;
+    }
+}
+
+
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .index-cards {
+    grid-template-columns: 1fr;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .index-cards {
+    grid-template-columns: 1fr;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .index-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .index-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .index-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
