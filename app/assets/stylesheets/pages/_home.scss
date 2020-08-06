@@ -1,8 +1,10 @@
-// Specific CSS for your home-page
+// Specific CSS for views/pages/home.html.erb
+
+// banner
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 240px 0;
+  padding: 120px 0;
 }
 
 .banner h1 {
@@ -63,6 +65,13 @@
   color: white;
 }
 
+// divider
+.divider {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
 // card grid
 .cards {
   display: grid;
@@ -91,17 +100,12 @@
   }
 }
 
-.divider {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-}
-
 .card-body-homepage {
   padding-right: 50px;
   padding-left: 30px;
 }
 
+// Responsive pages
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
