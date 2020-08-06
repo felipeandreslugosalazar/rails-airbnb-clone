@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2020_08_06_121223) do
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "time"
+    # t.datetime "time"
     t.index ["lookalike_id"], name: "index_bookings_on_lookalike_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
