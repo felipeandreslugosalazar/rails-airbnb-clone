@@ -1,33 +1,29 @@
+<h1 class="index-header">Browse Lookalikes</h1>
 
-
-<div class="index-header">
-  <h1 class="index-header-text">Browse Lookalikes</h1>
-</div>
-
-
-
-
-
-  <div class="lookalikes-cards-body">
-
-    <% @lookalikes.each do |lookalike| %>
-      <div class="card lookalike-card">
-        <% if lookalike.photo.attached? %>
-          <%= cl_image_tag lookalike.photo.key %>
-        <% end %>
-        <div class="card-body">
-          <h5 class="card-title"><%= lookalike.celeb_name %></h5>
-          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-          <div class="card-btn-body">
-            <%= link_to "See Details", lookalike_path(lookalike), class:"btn-standard" %>
-            <h5 class="card-text"><strong><%= lookalike.price %>€</strong></h5>
+<div class="container">
+    <div class="card-deck">
+      <div class="row">
+        <% @lookalikes.each do |lookalike| %>
+        <div class="col-lg-4 index-cards">
+          <div class="card index-card">
+              <%= cl_image_tag lookalike.photo.key %>
+              <div class="card-body">
+                <p class="card-title-index"><%= lookalike.celeb_name %> <small class="text-muted"> / <%= lookalike.price %>€/h</small> </p>
+                <p class="card-text-index">
+                <%= lookalike.description.first(95) %> ...
+                </p>
+              </div>
+              <div class="card-footer-index">
+                <%= link_to "More Information", lookalike_path(lookalike), class:"btn-standard" %>
+              </div>
           </div>
         </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
+    </div>
+</div>
+
   <div class="btn-create">
     <%= link_to "Create your own look-alike", new_lookalike_path(), class:"btn btn-primary btn-standard"%>
   </div>
-
 
