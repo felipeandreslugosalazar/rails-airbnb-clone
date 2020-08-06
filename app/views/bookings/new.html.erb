@@ -1,7 +1,0 @@
-<h1>Book <%= @lookalike.celeb_name %></h1>
-<%= simple_form_for [ @lookalike, @booking ] do |f| %>
-    <%= f.input :date %>
-    <%= f.submit %>
-<% end %>
-
-<%= link_to "Back to #{@lookalike.celeb_name}´s details", lookalike_path(@lookalike), class: "btn btn-flat" %>

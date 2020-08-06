@@ -1,8 +1,19 @@
-<h1>here we will show all the particular bookings for a particular user</h1>
-<h2>is where i want to iterate over the bookings</h2>
-<% current_user.bookings.each do |f|%>
-   <li><%= f.date %></li>
-   <li><%= f.lookalike.celeb_name%> </li>
-<% end %>
+<h1 class="bookings-title">Here are all your bookings</h1>
 
-<%= link_to "Back to all lookalikes", lookalikes_path, class: "btn btn-flat" %>
+<div class="container">
+    <div class="row">
+        <% current_user.bookings.each do |f|%>
+            <div class="col-lg-6">
+                <div class="card mb-4 card-dashboard">
+                <%= cl_image_tag f.lookalike.photo.key %>
+                    <div class="card-body">
+                        <p class="card-title-dashboard"><%= f.lookalike.celeb_name%></p>
+                        <p class="card-text-date"><%= f.date %></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+<p class="back-btn"><%= link_to "Back to all lookalikes", lookalikes_path, class: "btn btn-flat btn-standard" %></p>

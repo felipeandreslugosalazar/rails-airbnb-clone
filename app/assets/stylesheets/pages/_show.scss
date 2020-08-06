@@ -19,12 +19,43 @@
     }
 }
 
-.book-section {
+.book-date-else-section {
     text-align: center;
+}
+
+.booking-price {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.book-date-section {
+    display: flex;
+    justify-content: center;
+}
+
+.space-date-time {
+    height: 5px;
+}
+
+.booking-date {
+    text-align: center;
+}
+
+.date-section {
+    margin: auto 0 ;
+    margin-right: 10px;
+
+}
+.book-section {
+    text-align: left;
 
     .amount-bookings {
         font-size: 12px;
     }
+}
+
+.btn-booking {
+    margin-left: 0;
 }
 
 .desc-section {
@@ -36,4 +67,8 @@
         border-radius: $standard-radius;
         box-shadow: 0px 0px 10px lightgrey;
     }
+}
+
+.amount-bookings {
+    margin-bottom: 0;
 }

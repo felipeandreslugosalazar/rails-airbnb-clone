@@ -1,0 +1,29 @@
+.bookings-title {
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.card-booking {
+  width: 72%;
+  height: 160px;
+  margin: 0 auto;
+  border: none;
+  border-radius: $standard-radius;
+  transform: scale(1);
+  transition: $standard-transition;
+  
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.back-btn {
+  text-align: center;
+}
+
+.card-img {
+  border-radius: $standard-radius 0px 0px $standard-radius;
+  img {
+    object-fit: cover;
+  }
+}
