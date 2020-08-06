@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
-  def new
-    @booking = Booking.new
-    authorize @booking
-    @lookalike = Lookalike.find(params[:lookalike_id])
-    authorize @lookalike
-  end
+  # def new
+  #   @booking = Booking.new
+  #   authorize @booking
+  #   @lookalike = Lookalike.find(params[:lookalike_id])
+  #   authorize @lookalike
+  # end
 
   def create
     @booking = Booking.new(booking_params)
