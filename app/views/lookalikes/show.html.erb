@@ -16,10 +16,26 @@
         <p class="rating-quote">"Finally I met my idol 💪🏽"</p>
         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
       </div>
-      <div class="book-section">
-        <p><strong>Price per hour: </strong><%= @lookalike.price %>€</p>
-        <p><%= link_to "Book #{@lookalike.celeb_name}", new_lookalike_booking_path(@lookalike), class: "btn-standard" %></p>
-        <p class="amount-bookings"><strong>89</strong> people booked <%= @lookalike.celeb_name %> already</p>
+      <div class="book-date-else-section">
+        <p class="booking-price"><strong>Price per hour: </strong><%= @lookalike.price %>€</p>
+        <div class="book-date-section">
+          <div class="date-section">
+            <%= form_for [ @lookalike, @booking ] do |f| %>
+              <div class="form-actions booking-date">
+                <%= f.date_select :date, { ampm: true, order: [:day, :month, :year] } %>
+                <div class="space-date-time"></div>
+                <%= f.time_select :time %>
+                <%# <%= f.submit %>
+              </div>
+            <% end %>
+          
+          </div>
+          <div class="book-section">
+            <button class= "btn-standard btn-booking" form="new_booking">Book <%= @lookalike.celeb_name %></button>
+          </div>
+        
+        </div>
+      <p class="amount-bookings"><strong>89</strong> people booked <%= @lookalike.celeb_name %> already</p>
       </div>
     </div>
   </div>

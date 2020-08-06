@@ -8,6 +8,8 @@ class LookalikesController < ApplicationController
     def show
         @lookalike = Lookalike.find(params[:id])
         authorize @lookalike
+        @booking = Booking.new
+        # authorize @booking
     end
 
     def new
