@@ -1,0 +1,23 @@
+.card-dashboard {
+    transform: scale(1);
+    transition: $standard-transition;
+    border: none;
+    box-shadow: $standard-shadow;
+    &:hover {
+        transform: scale(1.03);
+    }
+    img {
+        width: max;
+        height: 240px;
+        object-fit: cover;
+    }
+}
+
+.card-title-dashboard {
+    text-align: center;
+    font-size: 24px;
+}
+
+.card-text-date {
+    text-align: center;
+}
