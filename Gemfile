@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'pundit'
 
+gem 'rails-assets-sweetalert2', '~> 5.1.1', source: 'https://rails-assets.org'
+gem 'sweet-alert2-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -26,6 +26,14 @@ class BookingsController < ApplicationController
     authorize @bookings
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @lookalike = Lookalike.find(params[:lookalike_id])
+    authorize @booking
+    @booking.destroy
+    redirect_to user_bookings_path(current_user)
+  end
+
   private
 
   def booking_params
