@@ -1,10 +1,22 @@
 <h1 class="index-header">Browse Lookalikes</h1>
 
+<div class="search-form">
+    <%= form_tag lookalikes_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a Lookalike"
+    %>
+    <%= submit_tag "Search", class: "btn-standard" %>
+    <% end %>
+</div>
+
+
 <div class="container">
     <div class="card-deck">
       <div class="row">
         <% @lookalikes.each do |lookalike| %>
-        <div class="col-lg-4 index-cards">
+        <div class="col-lg-6 index-cards">
           <div class="card index-card">
               <%= cl_image_tag lookalike.photo.key %>
               <div class="card-body">

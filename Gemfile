@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'pundit'
 
+gem 'pg_search', '~> 2.3.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
