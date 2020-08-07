@@ -27,7 +27,7 @@
             <%= form_for [ @lookalike, @booking ] do |f| %>
               <div class="form-actions booking-date">
                 <%#<%= f.datetime_select :date_time, { ampm: true, order: [:day, :month, :year] } %>
-                <%= f.text_field :date_time, id:"basicDate" %>
+                <%= f.text_field :date_time, id:"basicDate", placeholder:"Select Date & Time..." %>
                 <%#<div class="space-date-time"></div> %>
                 <%#<%= f.time_select :time %>
                 <%# <%= f.submit %>
