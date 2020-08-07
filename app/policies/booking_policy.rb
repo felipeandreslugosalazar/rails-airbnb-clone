@@ -13,6 +13,10 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
+  def destroy?
+    true
+  end
+
   def my_bookings?
     true
     # record.user == user
