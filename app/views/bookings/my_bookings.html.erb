@@ -1,6 +1,6 @@
 <h1 class="bookings-title">Here are all your bookings</h1>
 
-<div class="container">
+<div class="container" data-controller="alert">
     <div class="row">
         <% current_user.bookings.each do |f|%>
             <div class="col-lg-6">
@@ -10,8 +10,9 @@
                         <p class="card-title-dashboard"><%= f.lookalike.celeb_name%></p>
                         <p class="card-text-date"><%= f.date_time.strftime("%-d %B %Y, %-l:%M%p") %></p>
                     </div>
-                    <button id="sweet-alert-demo" class="btn-standard">Cancel Booking</button>
-                    <%= link_to "", lookalike_booking_path(f.lookalike, f), method: :delete, id: "delete-link", class: "hidden" %>
+                    <button class="btn-standard sweet-alert-demo" id="sweet-alert-demo-<%= f.id %>" data-target="alert.button"
+                            data-action="click->alert#sweet" data-id="<%= f.id %>">Cancel Booking</button>
+                    <%= link_to "", lookalike_booking_path(f.lookalike, f), method: :delete, id: "delete-link-#{f.id}", class: "hidden" %>
                 </div>
             </div>
         <% end %>
