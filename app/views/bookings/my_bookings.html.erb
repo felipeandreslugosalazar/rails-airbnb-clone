@@ -1,6 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<script src="sweetalert2.all.min.js"></script>
-
 <h1 class="bookings-title">Here are all your bookings</h1>
 
 <div class="container">
@@ -14,7 +11,9 @@
                         <p class="card-text-date"><%= f.date_time.strftime("%-d %B %Y, %-l:%M%p") %></p>
                     </div>
                     <%= link_to "Cancel Booking", lookalike_booking_path(f.lookalike, f), method: :delete, 
-                    class: "cancel-btn", id: "cancel-button", data: {confirm: "Are you sure?"} %>
+                    data: {
+                            confirm: "Do you really want to cancel your booking?",
+                    }%>
                 </div>
             </div>
         <% end %>
