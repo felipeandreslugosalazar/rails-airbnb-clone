@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_06_121223) do
+ActiveRecord::Schema.define(version: 2020_08_07_072000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,13 +37,16 @@ ActiveRecord::Schema.define(version: 2020_08_06_121223) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.datetime "date"
+    t.datetime "date_time"
     t.bigint "user_id", null: false
     t.bigint "lookalike_id", null: false
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+<<<<<<< HEAD
     # t.datetime "time"
+=======
+>>>>>>> ab3a3e1c7ae26fddb971736090bf84626048b388
     t.index ["lookalike_id"], name: "index_bookings_on_lookalike_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

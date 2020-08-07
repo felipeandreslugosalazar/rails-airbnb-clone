@@ -2,7 +2,11 @@ class LookalikesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   
     def index
-        @lookalikes = policy_scope(Lookalike).order(created_at: :desc)
+        if params[:query].present?
+          @lookalikes = policy_scope(Lookalike.where("celeb_name ILIKE ?", "%#{params[:query]}%"))
+        else
+          @lookalikes = policy_scope(Lookalike).order(created_at: :desc)
+        end
     end
 
     def show

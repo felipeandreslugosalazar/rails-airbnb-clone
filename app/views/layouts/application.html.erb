@@ -13,11 +13,13 @@
     <script src="sweetalert2.min.js"></script>
   </head>
 
-  <body>
+  <body style="position: relative">
     <%= render 'shared/navbar' %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
 </html>
+

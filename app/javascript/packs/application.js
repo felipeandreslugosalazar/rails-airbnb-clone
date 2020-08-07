@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { initModal } from '../components/sweetalert-cancel';
+import { initSweetalert } from '../plugins/init_sweetalert';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,5 +32,18 @@ import { initModal } from '../components/sweetalert-cancel';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initModal();
+  initSweetalert('#sweet-alert-demo', {
+    title: "Are you sure?",
+    text: "If you cancel this booking, there might be some additional costs",
+    icon: "warning",
+    // showCancelButton: true,
+    // confirmButtonColor: '#3085d6',
+    // cancelButtonColor: '#d33',
+    // confirmButtonText: 'Yes, delete it!'
+  }, (value) => {
+    if (value) {
+      const link = document.querySelector('#delete-link');
+      link.click();
+    }
+  });
 });
