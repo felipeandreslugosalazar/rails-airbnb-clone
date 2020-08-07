@@ -26,20 +26,13 @@
           <div class="date-section">
             <%= form_for [ @lookalike, @booking ] do |f| %>
               <div class="form-actions booking-date">
-<<<<<<< HEAD
-                <%= f.date_select :date, { ampm: true, order: [:day, :month, :year] } %>
-                <div class="space-date-time"></div>
-                <%# <%= f.time_select :time %>
-                <%# <%= f.submit %>
-                <%# comment! %>
-=======
                 <%#<%= f.datetime_select :date_time, { ampm: true, order: [:day, :month, :year] } %>
                 <%= f.text_field :date_time, id:"basicDate", placeholder:"Select Date & Time..." %>
                 <%#<div class="space-date-time"></div> %>
                 <%#<%= f.time_select :time %>
                 <%# <%= f.submit %>
                 <%#<input type="text" id="basicDate" placeholder="Here the Flatpickr should work" data-input>%>
->>>>>>> ab3a3e1c7ae26fddb971736090bf84626048b388
+
               </div>
             <% end %>
 
