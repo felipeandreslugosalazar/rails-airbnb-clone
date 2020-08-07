@@ -10,10 +10,8 @@
                         <p class="card-title-dashboard"><%= f.lookalike.celeb_name%></p>
                         <p class="card-text-date"><%= f.date_time.strftime("%-d %B %Y, %-l:%M%p") %></p>
                     </div>
-                    <%= link_to "Cancel Booking", lookalike_booking_path(f.lookalike, f), method: :delete, 
-                    data: {
-                            confirm: "Do you really want to cancel your booking?",
-                    }, class: "cancel-btn"%>
+                    <button id="sweet-alert-demo" class="btn-standard">Cancel Booking</button>
+                    <%= link_to "", lookalike_booking_path(f.lookalike, f), method: :delete, id: "delete-link", class: "hidden" %>
                 </div>
             </div>
         <% end %>
