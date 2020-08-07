@@ -8,7 +8,7 @@
                 <%= cl_image_tag f.lookalike.photo.key %>
                     <div class="card-body">
                         <p class="card-title-dashboard"><%= f.lookalike.celeb_name%></p>
-                        <p class="card-text-date"><%= f.date %></p>
+                        <p class="card-text-date"><%= f.date_time.strftime("%-d %B %Y, %-l:%M%p") %></p>
                     </div>
                 </div>
             </div>
